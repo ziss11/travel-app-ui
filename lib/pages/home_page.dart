@@ -63,9 +63,12 @@ class _HomePageState extends State<HomePage>
                     ],
                   ),
                 ),
-                Image.asset(
-                  'assets/search_btn.png',
-                  width: 20,
+                InkWell(
+                  onTap: () {},
+                  child: Image.asset(
+                    'assets/search_btn.png',
+                    width: 20,
+                  ),
                 ),
               ],
             ),

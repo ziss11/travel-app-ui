@@ -22,9 +22,10 @@ class _CustomNavbarState extends State<CustomNavbar> {
           });
         },
         child: AnimatedContainer(
-          width: currentIndex == index ? 100 : 40,
+          width: currentIndex == index ? 130 : 40,
+          curve: Curves.easeInCubic,
           duration: const Duration(milliseconds: 400),
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: currentIndex == index ? kLightPurple : Colors.transparent,
             borderRadius: BorderRadius.circular(
@@ -32,6 +33,8 @@ class _CustomNavbarState extends State<CustomNavbar> {
             ),
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.max,
             children: [
               Image.asset(
                 icon,
@@ -39,11 +42,8 @@ class _CustomNavbarState extends State<CustomNavbar> {
                 height: 18,
                 color: currentIndex == index ? kPurpleColor : kGreyColor,
               ),
-              SizedBox(
-                width: currentIndex == index ? 8 : 0,
-              ),
               currentIndex == index
-                  ? Expanded(
+                  ? Flexible(
                       child: Text(
                         name,
                         style: kSubtitle.copyWith(
@@ -76,8 +76,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
         ],
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           _navbarIcon(
             0,
