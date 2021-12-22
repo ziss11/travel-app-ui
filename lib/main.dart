@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_app/pages/detail_page.dart';
 import 'package:travel_app/pages/home_page.dart';
 import 'package:travel_app/style/colors.dart';
 import 'package:travel_app/style/text_style.dart';
@@ -24,6 +25,8 @@ class MyApp extends StatelessWidget {
         switch (settings.name) {
           case HomePage.routeName:
             return MaterialPageRoute(builder: (_) => const HomePage());
+          case DetailPage.routName:
+            return MaterialPageRoute(builder: (_) => const DetailPage());
           default:
             return MaterialPageRoute(
               builder: (_) {

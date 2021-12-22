@@ -150,12 +150,12 @@ class _HomePageState extends State<HomePage>
                 ),
                 CountriesCard(
                   img: 'assets/countrie2.png',
-                  name: 'Bali',
+                  name: 'Paris',
                   isPopular: false,
                 ),
                 CountriesCard(
                   img: 'assets/countrie3.png',
-                  name: 'Bali',
+                  name: 'England',
                   isPopular: false,
                 ),
               ],
