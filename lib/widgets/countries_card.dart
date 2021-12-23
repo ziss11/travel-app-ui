@@ -25,7 +25,7 @@ class CountriesCard extends StatelessWidget {
         height: 170,
         width: 120,
         decoration: BoxDecoration(
-          color: kGreyColor,
+          color: kYellowColor,
           borderRadius: BorderRadius.circular(
             defaultRadius,
           ),
@@ -42,7 +42,7 @@ class CountriesCard extends StatelessWidget {
                         height: 30,
                         width: 63,
                         decoration: BoxDecoration(
-                          color: kPurpleColor,
+                          color: kYellowColor,
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(
                               defaultRadius,
@@ -67,6 +67,7 @@ class CountriesCard extends StatelessWidget {
               name,
               style: kHeading6.copyWith(
                 fontWeight: medium,
+                color: kBlackColor,
               ),
             )
           ],

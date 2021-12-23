@@ -5,12 +5,12 @@ import 'package:travel_app/style/colors.dart';
 final TextStyle kHeading5 = GoogleFonts.poppins(
   fontWeight: FontWeight.bold,
   fontSize: 24,
-  color: kBlackColor,
+  color: kWhiteColor,
 );
 final TextStyle kHeading6 = GoogleFonts.poppins(
   fontWeight: FontWeight.w600,
   fontSize: 18,
-  color: kBlackColor,
+  color: kWhiteColor,
 );
 final TextStyle kSubtitle = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,

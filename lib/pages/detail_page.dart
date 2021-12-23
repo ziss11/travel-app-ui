@@ -20,7 +20,7 @@ class DetailPage extends StatelessWidget {
             padding: EdgeInsets.all(defaultMargin),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: kWhiteColor,
+              color: kBackgroundColor,
               borderRadius: BorderRadius.vertical(
                 bottom: Radius.circular(
                   defaultRadius,
@@ -49,12 +49,13 @@ class DetailPage extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: kLightPurple,
+                            color: kLightYellow,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Image.asset(
                             'assets/star_icon.png',
                             width: 20,
+                            color: kYellowColor,
                           ),
                         ),
                         const SizedBox(
@@ -64,7 +65,7 @@ class DetailPage extends StatelessWidget {
                           '4.92',
                           style: kSubtitle.copyWith(
                             fontWeight: semibold,
-                            color: kBlackColor,
+                            color: kYellowColor,
                           ),
                         ),
                       ],
@@ -74,12 +75,13 @@ class DetailPage extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: kLightPurple,
+                            color: kLightYellow,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Image.asset(
                             'assets/cloud_icon.png',
                             width: 20,
+                            color: kYellowColor,
                           ),
                         ),
                         const SizedBox(
@@ -89,7 +91,7 @@ class DetailPage extends StatelessWidget {
                           '27ºC',
                           style: kSubtitle.copyWith(
                             fontWeight: semibold,
-                            color: kBlackColor,
+                            color: kYellowColor,
                           ),
                         ),
                       ],
@@ -99,12 +101,13 @@ class DetailPage extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: kLightPurple,
+                            color: kLightYellow,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Image.asset(
                             'assets/airplane_icon.png',
                             width: 20,
+                            color: kYellowColor,
                           ),
                         ),
                         const SizedBox(
@@ -114,7 +117,7 @@ class DetailPage extends StatelessWidget {
                           '9 Jan',
                           style: kSubtitle.copyWith(
                             fontWeight: semibold,
-                            color: kBlackColor,
+                            color: kYellowColor,
                           ),
                         ),
                       ],
@@ -129,8 +132,9 @@ class DetailPage extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 24,
+            padding: EdgeInsets.symmetric(
+              vertical: defaultMargin,
+              horizontal: 16,
             ),
             child: IconButton(
               onPressed: () => Navigator.pop(context),
@@ -150,21 +154,21 @@ class DetailPage extends StatelessWidget {
           right: defaultMargin,
           left: defaultMargin,
           top: defaultMargin,
-          bottom: 110,
+          bottom: 130,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Description',
-              style: kTitle.copyWith(color: kBlackColor),
+              style: kTitle,
             ),
             const SizedBox(
               height: 5,
             ),
             Text(
               'Bali is famous for beaches, countless waves for surfing scuba diving, natiral sites to visit and explore trem ely fascinating Hindus culture with colorfuls ceremonies and magnificent temples gifted artists the producing.',
-              style: kBodyText.copyWith(height: 2),
+              style: kBodyText.copyWith(height: 2, color: kGreyColor),
               overflow: TextOverflow.clip,
             ),
           ],
@@ -179,7 +183,7 @@ class DetailPage extends StatelessWidget {
           horizontal: defaultMargin,
           vertical: 18,
         ),
-        color: kWhiteColor,
+        color: kBackgroundColor,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -189,7 +193,7 @@ class DetailPage extends StatelessWidget {
                 Text(
                   'Starting From',
                   style: kBodyText.copyWith(
-                    color: kBlackColor,
+                    color: kWhiteColor,
                   ),
                 ),
                 const SizedBox(
@@ -199,7 +203,7 @@ class DetailPage extends StatelessWidget {
                   '\$500 - 750',
                   style: kTitle.copyWith(
                     fontWeight: semibold,
-                    color: kPurpleColor,
+                    color: kYellowColor,
                   ),
                 ),
               ],
@@ -213,7 +217,7 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: _footer(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      backgroundColor: kLightGrey,
+      backgroundColor: kNavbarColor,
       body: SafeArea(
         child: ListView(
           physics: const BouncingScrollPhysics(),

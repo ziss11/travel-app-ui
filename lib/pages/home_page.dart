@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/style/colors.dart';
 import 'package:travel_app/style/constant.dart';
-import 'package:travel_app/style/route.dart';
 import 'package:travel_app/style/text_style.dart';
 import 'package:travel_app/widgets/countries_card.dart';
-import 'package:travel_app/widgets/custom_navbar.dart';
 import 'package:travel_app/widgets/events_card.dart';
 
 class HomePage extends StatefulWidget {
-  static const routeName = homeRoute;
-
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -50,7 +46,6 @@ class _HomePageState extends State<HomePage>
                         'Hello Bimo,',
                         style: kTitle.copyWith(
                           fontWeight: medium,
-                          color: kBlackColor,
                         ),
                       ),
                       const SizedBox(
@@ -68,6 +63,7 @@ class _HomePageState extends State<HomePage>
                   child: Image.asset(
                     'assets/search_btn.png',
                     width: 20,
+                    color: kYellowColor,
                   ),
                 ),
               ],
@@ -97,9 +93,9 @@ class _HomePageState extends State<HomePage>
         physics: const BouncingScrollPhysics(),
         isScrollable: true,
         controller: tabController,
-        labelColor: kPurpleColor,
+        labelColor: kYellowColor,
         unselectedLabelColor: kDarkGrey,
-        indicatorColor: kPurpleColor,
+        indicatorColor: kYellowColor,
         indicatorSize: TabBarIndicatorSize.label,
         padding: EdgeInsets.only(
           left: defaultMargin,
@@ -220,20 +216,14 @@ class _HomePageState extends State<HomePage>
       );
     }
 
-    return Scaffold(
-      floatingActionButton: const CustomNavbar(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      body: SafeArea(
-        child: ListView(
-          physics: const BouncingScrollPhysics(),
-          children: [
-            _header(),
-            _tabBar(),
-            _popularList(),
-            _eventList(),
-          ],
-        ),
-      ),
+    return ListView(
+      physics: const BouncingScrollPhysics(),
+      children: [
+        _header(),
+        _tabBar(),
+        _popularList(),
+        _eventList(),
+      ],
     );
   }
 
